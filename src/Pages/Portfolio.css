@@ -1,0 +1,40 @@
+.portfolio {
+    background-color: #c0c0c0;
+    padding: 0;
+    margin: 0;
+}
+
+.portfolio-content {
+    display: flex;
+    justify-content: center;
+    max-height: 800px;
+    overflow-y: auto;
+}
+
+.portfolio-header {
+    display: block;
+    background-color: #000080;
+    width: 100%;
+    /* height: 20px; */
+}
+
+.portfolio-button {
+    float: right;
+}
+
+p.portfolio-header {
+    color: white;
+}
+
+img.portfolio-content {
+    width: 75%;
+}
+
+.portfolio-content-inner {
+    justify-content: center;
+}
+
+button.portfolio {
+    margin-left: auto;
+    margin-right: 0;
+}

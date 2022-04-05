@@ -1,0 +1,27 @@
+.menu {
+    width: 128px;
+    position: absolute;
+    padding-top: 0px;
+    padding-left: 15px;
+    margin: 0;
+    background-color: #686868;
+    border: 2px;
+
+}
+
+.menu-items {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    background-color: #c0c0c0;
+}
+
+button:hover.menu-items {
+    background-color: #808080;
+}
+
+.menu-hidden {
+    display: none;
+}

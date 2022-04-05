@@ -1,0 +1,40 @@
+body {
+    background-color: #008080;
+}
+
+a {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-size: 12px;
+}
+
+.container-desktop {
+    display: flex;
+    /* grid-template-columns: 100px; */
+    padding: 0;
+}
+
+.container_icon {
+    height: 240px;
+    display: grid;
+    grid-template-columns: 100px;
+}
+
+.container-modal {
+    margin: 0 auto;
+}
+
+.desktop-img {
+    padding: 0;
+    margin: 0;
+}
+
+.desktop-item {
+    margin-left: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    width: auto;
+}
