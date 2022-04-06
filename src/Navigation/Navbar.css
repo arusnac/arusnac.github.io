@@ -44,3 +44,13 @@ button:active.navbar-button__start {
     padding: 4px 24px;
     text-decoration: none;
 }
+
+img.navbar-image {
+    max-width: 16px;
+    max-height: 24px;
+    margin-right: 5px;
+    margin-left: 5px;
+    /* border-right: solid;
+    border-left: solid;
+    border-color: rgb(122, 122, 122); */
+}

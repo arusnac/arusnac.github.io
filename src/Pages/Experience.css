@@ -1,0 +1,48 @@
+.experience-content {}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: .5;
+}
+
+.double-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 2
+}
+
+
+.title-column {
+    margin-top: 10px;
+    height: 150px;
+
+}
+
+
+button.button-title {
+    width: 80%;
+    margin-top: 5px;
+    padding-top: 8px;
+    border: none;
+    background: transparent;
+}
+
+button:hover.button-title {
+    background-color: rgb(145, 145, 145);
+}
+
+button:focus.button-title {
+    background-color: rgb(145, 145, 145);
+}
+
+.info-column {}

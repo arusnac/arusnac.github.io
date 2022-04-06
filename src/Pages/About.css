@@ -1,0 +1,18 @@
+img.about-content {
+    max-width: 100%;
+    float: left;
+}
+
+p.about-content {}
+
+.about-content {
+    display: grid;
+    justify-content: center;
+    max-height: 800px;
+    overflow-y: auto;
+    grid-template-columns: auto auto;
+}
+
+.about-item {
+    border: 1px;
+}

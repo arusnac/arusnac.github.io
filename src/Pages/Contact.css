@@ -1,0 +1,25 @@
+.contact-content {
+    display: grid;
+    overflow-y: auto;
+    overflow-x: hidden;
+    grid-template-columns: auto auto;
+
+}
+
+
+.contact-inputs {
+    width: 100%;
+    padding: 10px;
+}
+
+p.contact-content {
+    padding: 10px;
+}
+
+.contact-submit {
+    position: relative;
+    margin-left: auto;
+    margin-right: 10px;
+    text-align: right;
+    padding: 10px;
+}

@@ -1,7 +1,10 @@
 .portfolio {
     background-color: #c0c0c0;
     padding: 0;
-    margin: 0;
+    margin: 10px;
+    width: 100%;
+    border: outset;
+    box-shadow: 1px 1px;
 }
 
 .portfolio-content {
@@ -12,9 +15,9 @@
 }
 
 .portfolio-header {
-    display: block;
+    padding: 0;
+    margin: 0;
     background-color: #000080;
-    width: 100%;
     /* height: 20px; */
 }
 
@@ -23,16 +26,15 @@
 }
 
 p.portfolio-header {
+    padding: 5px;
     color: white;
 }
 
-img.portfolio-content {
-    width: 75%;
+img.portfolio-image {
+    max-width: 90%;
 }
 
-.portfolio-content-inner {
-    justify-content: center;
-}
+.portfolio-content-inner {}
 
 button.portfolio {
     margin-left: auto;

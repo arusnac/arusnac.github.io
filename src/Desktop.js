@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import './Desktop.css'
 import gitHub from './assets/github.png'
 import linkedIn from './assets/linkedin.png'
 import Portfolio from "./Pages/Portfolio";
+import eventBus from "./EventBus";
+import About from "./Pages/About";
+import Experience from "./Pages/Experience";
+import Contact from "./Pages/Contact";
 
-const Desktop = () => {
+const Desktop = (props) => {
+
+
     return (<div>
         <div className='container-desktop'>
             <div className="container_icon">
@@ -21,7 +27,12 @@ const Desktop = () => {
                     </div>
                 </div>
             </div>
-            <div className='container-modal'><Portfolio /></div>
+            <div className='container-modal'>
+                {props.about && <About openAbout={props.openAbout} />}
+                {props.port && <Portfolio openPort={props.openPort} />}
+                {props.exp && <Experience openExp={props.openExp} />}
+                {props.contact && <Contact openContact={props.openContact} />}
+            </div>
         </div>
     </div>
     );
