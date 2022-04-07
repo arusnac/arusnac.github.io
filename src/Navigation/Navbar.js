@@ -1,4 +1,4 @@
-import React, { useState, useContext, createContext } from "react";
+import React, { useState, useContext, createContext, useEffect } from "react";
 import './Navbar.css'
 import Menu from './Menu'
 import useDate from "./Date";
@@ -21,6 +21,10 @@ const Navbar = (props) => {
         }
 
     }
+
+    useEffect(() => {
+        setIsOpen(false);
+    }, [props.openPortfolio]);
 
     // if (props.closeMenu['close'] === false) {
     //     setIsOpen(true);
