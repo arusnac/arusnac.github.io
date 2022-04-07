@@ -1,19 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useContext, createContext } from "react";
 import './Navbar.css'
 import Menu from './Menu'
 import useDate from "./Date";
 import fb from '../assets/fb.png'
 import insta from '../assets/insta.png'
+import { MenuContext } from "./MenuContext";
 
 const Navbar = (props) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isPortOpen, setPortOpen] = useState(false);
 
-
     const isOpenHandler = () => {
         if (isOpen === false) {
             setIsOpen(true);
-            console.log(props.closeMenu['close'])
+
         }
         if (isOpen === true) {
             setIsOpen(false);
@@ -50,9 +50,10 @@ const Navbar = (props) => {
                 </div>
 
             </div>
-            {isOpen && <Menu openPortfolio={props.openPortfolio} openAbout={props.openAbout}
+            {isOpen && <Menu openPortfolio={() => props.openPortfolio(isOpenHandler)} openAbout={props.openAbout}
                 openExp={props.openExp} openContact={props.openContact} />}
         </div >
+
     );
 }
 

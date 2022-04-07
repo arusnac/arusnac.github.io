@@ -9,9 +9,19 @@
 
 .portfolio-content {
     display: flex;
-    justify-content: center;
     max-height: 800px;
     overflow-y: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.portfolio-content-inner {
+    justify-content: center;
+    width: 100%;
+}
+
+.portfolio-test {
+    width: 100%;
 }
 
 .portfolio-header {
@@ -34,7 +44,7 @@ img.portfolio-image {
     max-width: 90%;
 }
 
-.portfolio-content-inner {}
+
 
 button.portfolio {
     margin-left: auto;

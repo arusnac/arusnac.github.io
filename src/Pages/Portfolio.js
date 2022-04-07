@@ -11,13 +11,19 @@ const Portfolio = (props) => {
                     <button onClick={props.openPort} className="portfolio-button">X</button></p>
             </div>
             <div className='portfolio-content'>
+                <h4>Todo Application</h4>
+
+
+                <p>This application was developed using Python and Flask</p>
                 <div className='portfolio-content-inner'>
-                    <h4>Todo Application</h4>
-                    <p>This application was developed using Python and Flask</p>
+
+
                     <img className='portfolio-image' src={test} alt='test' />
+
                 </div>
+
             </div>
-        </div>
+        </div >
     )
 };
 

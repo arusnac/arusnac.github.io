@@ -1,9 +1,9 @@
-img.about-content {
+img.about-item {
+    padding-top: 30px;
     max-width: 100%;
-    float: left;
+
 }
 
-p.about-content {}
 
 .about-content {
     display: grid;
@@ -15,4 +15,5 @@ p.about-content {}
 
 .about-item {
     border: 1px;
+    padding: 10px;
 }

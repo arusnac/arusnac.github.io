@@ -15,10 +15,10 @@ const Contact = (props) => {
     const onSubmit = (e) => {
         e.preventDefault();
         send(
-            'service_dpj6voj',
-            'template_79kaxyo',
+            'serviceID',
+            'templateID',
             'Me',
-            'ylHzbvN_yt7PXnpye'
+            'userID'
         )
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);

@@ -10,7 +10,7 @@ import Rusnac from "./Inner/Rusnac";
 const Experience = (props) => {
     const [page, togglePage] = useState('usps');
 
-
+    //Toggle the various job pages
     const displayUsps = () => {
         togglePage('usps')
     }
