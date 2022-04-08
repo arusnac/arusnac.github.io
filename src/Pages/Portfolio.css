@@ -1,10 +1,27 @@
 .portfolio {
     background-color: #c0c0c0;
     padding: 0;
-    margin: 10px;
+    margin: 150px 0 0 0;
     width: 100%;
     border: outset;
     box-shadow: 1px 1px;
+}
+
+.portfolio-header {
+
+    padding: 0;
+    margin: 0;
+    background-color: #000080;
+}
+
+p.portfolio-header {
+    padding: 5px 5px 5px 5px;
+    color: white;
+}
+
+img.header-icon {
+    width: 16px;
+    padding-right: 5px;
 }
 
 .portfolio-content {
@@ -24,20 +41,9 @@
     width: 100%;
 }
 
-.portfolio-header {
-    padding: 0;
-    margin: 0;
-    background-color: #000080;
-    /* height: 20px; */
-}
 
 .portfolio-button {
     float: right;
-}
-
-p.portfolio-header {
-    padding: 5px;
-    color: white;
 }
 
 img.portfolio-image {

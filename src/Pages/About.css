@@ -1,6 +1,10 @@
 img.about-item {
-    padding-top: 30px;
+    margin: 0;
+    border: solid;
+    padding: 0;
     max-width: 100%;
+    border-color: rgb(99, 99, 99);
+    border-width: 1px;
 
 }
 
@@ -11,9 +15,19 @@ img.about-item {
     max-height: 800px;
     overflow-y: auto;
     grid-template-columns: auto auto;
+    border: inset;
 }
 
 .about-item {
     border: 1px;
     padding: 10px;
+
+}
+
+.about-info {
+    background-color: white;
+    margin: 10px;
+    border: solid;
+    border-width: 1px;
+    border-color: rgb(99, 99, 99);
 }

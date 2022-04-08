@@ -24,13 +24,12 @@ function App(props) {
     openContactPage(!contact)
   }
 
-  let close = 'false';
 
   let closeMenu = {
     close: false
   };
 
-  const openPortfolio = (e, a) => {
+  const openPortfolio = (e) => {
     if (about) {
       openAbout(false);
     }
@@ -40,10 +39,10 @@ function App(props) {
     if (experience) {
       openExperience(false);
     }
-    close = 'true';
+    console.log(e);
+    closeMenu.close = true;
+    console.log(closeMenu.close)
     openPort(!port);
-    console.log(e)
-    // console.log(closeMenu['close'])
   }
 
   //Trigger About Me page
@@ -73,9 +72,16 @@ function App(props) {
     openExperience(!experience)
   }
 
+  const whichTab = () => {
+    if (port === true) {
+      return 'portfolio';
+    }
+  }
+
+
   return (
     <div>
-      <Navbar closeMenu={closeMenu['close']} openPortfolio={openPortfolio} openAbout={openAboutMe} openExp={openExp} openContact={openContact} ></Navbar>
+      <Navbar openTab={whichTab} openPortfolio={openPortfolio} openAbout={openAboutMe} openExp={openExp} openContact={openContact} ></Navbar>
       <Desktop port={port} about={about} exp={experience} contact={contact} openAbout={openAboutMe} openExp={openExp} openContact={openContact} openPort={openPortfolio}></Desktop>
     </div>
   );

@@ -18,7 +18,7 @@ const About = (props) => {
             </div>
             <div className='about-content'>
                 <div className='about-item'> <img className='about-item' src={test} alt='test' /></div>
-                <div className='about-item'> <p className='about-item'>Hello, I'm Andrew!
+                <div className='about-item about-info'> <p className='about-item'>Hello, I'm Andrew!
                     <br /><br />
                     I'm a new Computer Science graduate with an interest in breaking into the world of programming.<br />
                     I've been interested in development since I was in high school, I remember dabbling with Visual Basic<br />
