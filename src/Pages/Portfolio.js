@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import test from '../assets/Portfolio/todo2.jpg'
 import './Portfolio.css'
+import portfolioIcon from '../assets/Portfolio/portfolio.png';
 
 const Portfolio = (props) => {
 
     return (
         <div className='portfolio'>
             <div className='portfolio-header'>
-                <p className="portfolio-header">Portfolio
+                <p className="portfolio-header"><img className='contact-icon' src={portfolioIcon} alt='icon' />Portfolio
                     <button onClick={props.openPort} className="portfolio-button">X</button></p>
             </div>
             <div className='portfolio-content'>

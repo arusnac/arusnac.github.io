@@ -10,78 +10,56 @@ function App(props) {
   const [about, openAbout] = useState(false);
   const [experience, openExperience] = useState(false);
   const [contact, openContactPage] = useState(false);
+  const [tab, setTab] = useState('')
 
   const openContact = () => {
-    if (about) {
-      openAbout(false);
-    }
-    if (port) {
-      openPort(false);
-    }
-    if (experience) {
-      openExperience(false);
-    }
+
     openContactPage(!contact)
+    if (tab !== 'Contact') {
+      setTab('Contact');
+    }
+    else {
+      setTab('');
+    }
   }
 
 
-  let closeMenu = {
-    close: false
-  };
-
-  const openPortfolio = (e) => {
-    if (about) {
-      openAbout(false);
-    }
-    if (contact) {
-      openContact(false);
-    }
-    if (experience) {
-      openExperience(false);
-    }
-    console.log(e);
-    closeMenu.close = true;
-    console.log(closeMenu.close)
+  const openPortfolio = () => {
     openPort(!port);
+    if (tab !== 'Portfolio') {
+      setTab('Portfolio');
+    } else {
+      setTab('');
+    }
+
   }
 
   //Trigger About Me page
   const openAboutMe = () => {
-    if (contact) {
-      openContact(false);
-    }
-    if (port) {
-      openPort(false);
-    }
-    if (experience) {
-      openExperience(false);
-    }
     openAbout(!about);
+    if (tab !== 'About') {
+      setTab('About');
+    }
+    else {
+      setTab('');
+    }
   }
 
   const openExp = () => {
-    if (about) {
-      openAbout(false);
-    }
-    if (port) {
-      openPort(false);
-    }
-    if (contact) {
-      openContact(false);
-    }
-    openExperience(!experience)
-  }
 
-  const whichTab = () => {
-    if (port === true) {
-      return 'portfolio';
+    openExperience(!experience)
+    if (tab !== 'Experience') {
+      setTab('Experience');
+    }
+    else {
+      setTab('');
     }
   }
 
 
   return (
     <div>
-      <Navbar openTab={whichTab} openPortfolio={openPortfolio} openAbout={openAboutMe} openExp={openExp} openContact={openContact} ></Navbar>
+      <Navbar tab={tab} openPortfolio={openPortfolio} openAbout={openAboutMe} openExp={openExp} openContact={openContact} ></Navbar>
       <Desktop port={port} about={about} exp={experience} contact={contact} openAbout={openAboutMe} openExp={openExp} openContact={openContact} openPort={openPortfolio}></Desktop>
     </div>
   );

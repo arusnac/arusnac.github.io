@@ -15,29 +15,33 @@ a {
     display: flex;
     height: 100vh;
     padding: 0;
+    justify-content: center;
 }
 
 .container_icon {
-    height: 240px;
     display: grid;
     grid-template-columns: 100px;
 }
 
 .container-modal {
+    position: fixed;
     margin: 0 auto;
+
+}
+
+.container-modal-2 {
+    position: fixed;
+    margin: 25px auto;
 
 }
 
 .desktop-img {
     padding: 0;
-    margin: 0;
-    max-width: 50%;
+    margin: 15px 0 0 0;
+    max-width: 45%;
 }
 
 .desktop-item {
-    margin-left: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    margin: 5px;
     text-align: center;
-    width: auto;
 }

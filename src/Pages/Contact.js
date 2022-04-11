@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import './Portfolio.css'
-import { send } from 'emailjs-com'
-import './Contact.css'
-import emailIcon from '../assets/Portfolio/email_icon.png'
+import './Portfolio.css';
+import { send } from 'emailjs-com';
+import './Contact.css';
+import emailIcon from '../assets/Portfolio/email_icon.png';
 
 const Contact = (props) => {
 
@@ -37,7 +37,7 @@ const Contact = (props) => {
         <div className='portfolio'>
             <div className='portfolio-header'>
 
-                <p className="portfolio-header">Contact
+                <p className="portfolio-header"><img className='contact-icon' src={emailIcon} alt='icon' />Contact
                     <button onClick={props.openContact} className="portfolio-button">X</button></p>
             </div>
             <div className='contact-container'>

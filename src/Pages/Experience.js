@@ -6,6 +6,7 @@ import Usps from "./Inner/Usps";
 import Shiro from "./Inner/Shiro";
 import Intel from './Inner/Intel';
 import Rusnac from "./Inner/Rusnac";
+import experienceIcon from '../assets/Portfolio/experienceIcon.png';
 
 const Experience = (props) => {
     const [page, togglePage] = useState('usps');
@@ -30,7 +31,9 @@ const Experience = (props) => {
     return (
         <div className='portfolio'>
             <div className='portfolio-header'>
-                <p className="portfolio-header">Work Experience
+                <p className="portfolio-header">
+                    <img className='contact-icon' src={experienceIcon} alt='icon' />
+                    Work Experience
                     <button onClick={props.openExp} className="portfolio-button">X</button></p>
             </div>
 

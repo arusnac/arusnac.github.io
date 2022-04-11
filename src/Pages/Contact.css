@@ -39,3 +39,8 @@ p.contact-content {
     text-align: right;
     padding: 10px;
 }
+
+img.contact-icon {
+    width: 16px;
+    margin: 0 5px 0 0;
+}

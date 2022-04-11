@@ -1,0 +1,32 @@
+button.tab {
+    border-style: inset;
+    background-color: #c0c0c0;
+    border-color: #808080;
+    text-align: left;
+    padding: 4px 24px 0 0;
+    text-decoration: none;
+    margin-left: 5px;
+    width: 150px;
+}
+
+img.tab_icon {
+    vertical-align: middle;
+    padding: 0 2px 4px 2px;
+    width: 16px;
+}
+
+button.tab_start {
+    border-style: outset;
+    background-color: #c0c0c0;
+    border-color: #808080;
+    text-align: left;
+    padding: 4px 4px 0 0;
+    text-decoration: none;
+
+}
+
+button.active_tab_start {
+    background: #ffffff;
+    transition: all .6s;
+    border-style: inset;
+}
