@@ -1,0 +1,12 @@
+.info_container {
+    background-color: white;
+    max-width: 100%;
+    border-style: outset;
+    border-width: 1px;
+    height: 250px;
+}
+
+.info {
+    position: fixed;
+    bottom: 0%;
+}

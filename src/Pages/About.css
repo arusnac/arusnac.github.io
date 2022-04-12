@@ -10,12 +10,14 @@ img.about-item {
 
 
 .about-content {
-    display: grid;
+    display: flex;
     justify-content: center;
     max-height: 800px;
     overflow-y: auto;
-    grid-template-columns: auto auto;
+    margin: 0;
+    padding: 0;
     border: inset;
+    max-width: 50%;
 }
 
 .about-item {

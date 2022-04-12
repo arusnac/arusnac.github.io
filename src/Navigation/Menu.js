@@ -23,7 +23,7 @@ const Menu = (props) => {
                     <img className='contact-icon' src={experienceIcon} alt='icon' />
                     &nbsp; Experience</button>
 
-                <button onClick={props.openAbout} className='menu-items sec-last-item'>
+                <button onClick={props.openAbout} value='Contact' className='menu-items sec-last-item'>
                     <img className='contact-icon' src={aboutIcon} alt='icon' />&nbsp; About
                 </button>
                 <button onClick={props.openContact} className='menu-items last-item'>

@@ -51,8 +51,12 @@ const Navbar = (props) => {
                         </button>}
                     </div>
                     <div className='time'>
-                        <img className='navbar-image' src={fb} alt='Facebook logo' />
-                        <img className='navbar-image' src={insta} alt='Instagram logo' />
+                        <a href='https://www.facebook.com/arusnac' target="_blank" rel="noreferrer noopener">
+                            <img className={styles.tab_icon} src={fb} alt='Facebook logo' />
+                        </a>
+                        <a href='https://www.facebook.com/arusnac' target="_blank" rel="noreferrer noopener">
+                            <img className={styles.tab_icon} src={insta} alt='Instagram logo' />
+                        </a>
                         <button className='time-button'>{d.time}</button>
                     </div>
 
