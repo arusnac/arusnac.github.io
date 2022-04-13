@@ -9,9 +9,14 @@ import Experience from "./Pages/Experience";
 import Contact from "./Pages/Contact";
 import Info from './Pages/Info';
 import Draggable from 'react-draggable';
+import { useSelector } from 'react-redux';
+
 
 const Desktop = (props) => {
-
+    const window = useSelector((state) => state.window.value);
+    const windowStates = useSelector((state) => state.window);
+    console.log(window);
+    console.log(windowStates);
 
     return (<div>
         <div className="container_icon">
@@ -30,14 +35,17 @@ const Desktop = (props) => {
             </div>
 
         </div>
+        \
         <div className='container-desktop'>
-            <div className='container-modal'><Info /></div>
-            {props.about &&
+            <div className='container-modal'>
+                <Info />
+            </div>
+            {window.window.about.isOpen &&
 
                 <div className='container-modal'><About openAbout={props.openAbout} />
                 </div>
             }
-            {props.port &&
+            {window.window.portfolio.isOpen &&
 
                 <div className='container-modal-2'>
                     < Portfolio onFocus={() => { console.log('test') }} openPort={props.openPort} />
