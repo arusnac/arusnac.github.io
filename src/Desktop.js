@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import './Desktop.css'
 import gitHub from './assets/github.png'
 import linkedIn from './assets/linkedin.png'
@@ -9,14 +9,22 @@ import Experience from "./Pages/Experience";
 import Contact from "./Pages/Contact";
 import Info from './Pages/Info';
 import Draggable from 'react-draggable';
-import { useSelector } from 'react-redux';
-
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleFocus } from './Redux/windowSlice';
 
 const Desktop = (props) => {
     const window = useSelector((state) => state.window.value);
     const windowStates = useSelector((state) => state.window);
-    console.log(window);
-    console.log(windowStates);
+    const focusWindow = useRef(null);
+    const dispatch = useDispatch();
+
+    const handleClick = (e) => {
+        dispatch(toggleFocus('about'))
+        console.log(e.target)
+        focusWindow.current.focus();
+        console.log('focus')
+    }
+
 
     return (<div>
         <div className="container_icon">
@@ -35,29 +43,29 @@ const Desktop = (props) => {
             </div>
 
         </div>
-        \
+
         <div className='container-desktop'>
             <div className='container-modal'>
                 <Info />
             </div>
-            {window.window.about.isOpen &&
+            {window.windows[0].isOpen &&
 
-                <div className='container-modal'><About openAbout={props.openAbout} />
+                <div onClick={handleClick} value='about' ref={focusWindow} className='container-modal'><About openAbout={props.openAbout} />
                 </div>
             }
-            {window.window.portfolio.isOpen &&
+            {window.windows[1].isOpen &&
 
                 <div className='container-modal-2'>
                     < Portfolio onFocus={() => { console.log('test') }} openPort={props.openPort} />
                 </div>
             }
-            {props.exp &&
+            {window.windows[2].isOpen &&
 
-                <div className='container-modal'>
+                <div onClick={handleClick} className='container-modal'>
                     <Experience openExp={props.openExp} />
                 </div>
             }
-            {props.contact &&
+            {window.windows[3].isOpen &&
 
                 <div className='container-modal'>
                     <Contact openContact={props.openContact} />

@@ -5,13 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
-import windowReducer from './features/windowSlice'
+import windowReducer from './features/windowSlice';
+import store from './Redux/store';
 
-const store = configureStore({
-  reducer: {
-    window: windowReducer,
-  }
-})
 
 ReactDOM.render(
   <React.StrictMode>

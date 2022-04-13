@@ -13,10 +13,17 @@ const About = (props) => {
     const closePage = () => {
         setClosed(!isOpen);
     }
+    const focusWindow = React.useRef(null);
+
+    const handleClick = () => {
+        nodeRef.current.focus();
+        console.log('focus')
+    }
+
 
     return (
         <Draggable handle='#handle' nodeRef={nodeRef}>
-            <div ref={nodeRef} className='portfolio'>
+            <div onClick={handleClick} ref={nodeRef} className='portfolio'>
                 <div id='handle' className='portfolio-header'>
                     <p className="portfolio-header">
                         <img className='contact-icon' src={aboutIcon} alt='icon' />

@@ -7,15 +7,15 @@ import portfolioIcon from '../assets/Portfolio/portfolio.png';
 import experienceIcon from '../assets/Portfolio/experienceIcon.png';
 import aboutIcon from '../assets/Portfolio/aboutIcon.png';
 import startIcon from '../assets/startIcon.png';
-import { useDispatch } from 'react-redux';
-import { changeStatus } from '../features/windowSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeStatus, toggleOpen } from '../Redux/windowSlice';
 
 const Menu = (props) => {
     const dispatch = useDispatch();
+    const windows = useSelector((state) => state.window.value)
 
     const updateWindow = (e) => {
-
-        dispatch(changeStatus({ window: { [e.target.value]: { isOpen: true, isFocus: false } } }))
+        dispatch(toggleOpen(e.target.value))
     }
 
     return (
@@ -32,7 +32,7 @@ const Menu = (props) => {
                         src={portfolioIcon} alt='icon' />
                     &nbsp; Portfolio</button>
                 <button
-                    onClick={props.openExp}
+                    onClick={updateWindow}
                     value='experience'
                     className='menu-items'>
                     <img
@@ -50,7 +50,7 @@ const Menu = (props) => {
                     &nbsp; About
                 </button>
                 <button
-                    onClick={props.openContact}
+                    onClick={updateWindow}
                     value='contact'
                     className='menu-items last-item'>
                     <img
