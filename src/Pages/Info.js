@@ -19,7 +19,9 @@ const Info = (props) => {
                     <p>Welcome!<br /><br />
                         You can check out my socials with the "desktop icons"<br />
                         or in the tray on the bottom right. Hit the start button<br />
-                        to check out more about me :)</p>
+                        to check out more about me :)
+                        <br /><br />
+                        *Note this is a work in progress, it's buggy and incomplete!</p>
                     <div className={styles.info}>
                         <img src={catGif} alt='cat' />
                     </div>

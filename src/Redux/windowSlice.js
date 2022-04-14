@@ -34,8 +34,11 @@ export const windowSlice = createSlice({
             for (const i in state.value.windows) {
                 console.log(i)
                 if (state.value.windows[i].id === action.payload) {
-                    console.log(state.value.windows)
-                    state.value.windows[i].isFocus = !state.value.windows[i].isFocus
+                    if (state.value.windows[i].isFocus === true) {
+                        return
+                    } else {
+                        state.value.windows[i].isFocus = !state.value.windows[i].isFocus
+                    }
                 } else {
                     if (state.value.windows[i].isFocus === true) {
                         state.value.windows[i].isFocus = false;

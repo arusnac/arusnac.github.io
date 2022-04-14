@@ -8,9 +8,25 @@ import Intel from './Inner/Intel';
 import Rusnac from "./Inner/Rusnac";
 import experienceIcon from '../assets/Portfolio/experienceIcon.png';
 import Draggable from "react-draggable";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { toggleFocus, toggleOpen } from "../Redux/windowSlice";
+
 
 const Experience = (props) => {
     const nodeRef = React.useRef(null);
+    const window = useSelector((state) => state.window.value);
+    const dispatch = useDispatch();
+
+    const handleClick = () => {
+        dispatch(toggleFocus('experience'))
+
+    }
+
+    const closeWindow = (e) => {
+        dispatch(toggleOpen(e.target.value))
+    }
+
     const [page, togglePage] = useState('usps');
 
     //Toggle the various job pages
@@ -32,12 +48,22 @@ const Experience = (props) => {
 
     return (
         <Draggable handle='#handle' nodeRef={nodeRef}>
-            <div ref={nodeRef} className='portfolio'>
+            <div
+                onClick={handleClick}
+                ref={nodeRef}
+                className='portfolio'
+            >
                 <div id='handle' className='portfolio-header'>
-                    <p className="portfolio-header">
+                    <p className="portfolio-header"
+                        style={{ backgroundColor: window.windows[2].isFocus && '#7d7d7d' }}>
                         <img className='contact-icon' src={experienceIcon} alt='icon' />
                         Work Experience
-                        <button onClick={props.openExp} className="portfolio-button">X</button></p>
+                        <button onClick={closeWindow}
+                            value='experience'
+                            className="portfolio-button">
+                            X
+                        </button>
+                    </p>
                 </div>
 
                 <div className="row">

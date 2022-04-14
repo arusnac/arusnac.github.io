@@ -8,7 +8,7 @@ import experienceIcon from '../assets/Portfolio/experienceIcon.png';
 import aboutIcon from '../assets/Portfolio/aboutIcon.png';
 import startIcon from '../assets/startIcon.png';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeStatus, toggleOpen } from '../Redux/windowSlice';
+import { toggleFocus, toggleOpen } from '../Redux/windowSlice';
 
 const Menu = (props) => {
     const dispatch = useDispatch();
@@ -16,6 +16,7 @@ const Menu = (props) => {
 
     const updateWindow = (e) => {
         dispatch(toggleOpen(e.target.value))
+        dispatch(toggleFocus(e.target.value))
     }
 
     return (

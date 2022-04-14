@@ -10,9 +10,9 @@ img.about-item {
 
 
 .about-content {
-    display: flex;
+    display: block;
     justify-content: center;
-    max-height: 800px;
+    max-height: 50%;
     overflow-y: auto;
     margin: 0;
     padding: 0;

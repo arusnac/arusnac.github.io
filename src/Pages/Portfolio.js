@@ -3,16 +3,36 @@ import test from '../assets/Portfolio/todo2.jpg'
 import './Portfolio.css'
 import portfolioIcon from '../assets/Portfolio/portfolio.png';
 import Draggable from "react-draggable";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { toggleFocus, toggleOpen } from "../Redux/windowSlice";
 
 const Portfolio = (props) => {
     const nodeRef = React.useRef(null);
+    const window = useSelector((state) => state.window.value);
+    const dispatch = useDispatch();
+
+    const handleClick = () => {
+        dispatch(toggleFocus('portfolio'))
+    }
+
+    const closeWindow = (e) => {
+        dispatch(toggleOpen(e.target.value))
+    }
+
 
     return (
         <Draggable handle='#handle' nodeRef={nodeRef}>
-            <div ref={nodeRef} className='portfolio'>
-                <div id='handle' className='portfolio-header'>
+            <div onClick={handleClick} ref={nodeRef} className='portfolio'  >
+                <div id='handle' className='portfolio-header'
+                    style={{ backgroundColor: window.windows[1].isFocus && '#7d7d7d' }}>
                     <img className='contact-icon' src={portfolioIcon} alt='icon' />Portfolio
-                    <button onClick={props.openPort} className="portfolio-button">X</button>
+                    <button
+                        onClick={closeWindow}
+                        value='portfolio'
+                        className='portfolio-button'>
+                        X
+                    </button>
                 </div>
                 <div className='portfolio-content'>
                     <h4>Todo Application</h4>

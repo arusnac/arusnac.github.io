@@ -16,14 +16,6 @@ const Desktop = (props) => {
     const window = useSelector((state) => state.window.value);
     const windowStates = useSelector((state) => state.window);
     const focusWindow = useRef(null);
-    const dispatch = useDispatch();
-
-    const handleClick = (e) => {
-        dispatch(toggleFocus('about'))
-        console.log(e.target)
-        focusWindow.current.focus();
-        console.log('focus')
-    }
 
 
     return (<div>
@@ -50,18 +42,22 @@ const Desktop = (props) => {
             </div>
             {window.windows[0].isOpen &&
 
-                <div onClick={handleClick} value='about' ref={focusWindow} className='container-modal'><About openAbout={props.openAbout} />
+                <div value='about' className='container-modal'
+                    style={{ zIndex: window.windows[0].isFocus && 1 }}>
+                    <About openAbout={props.openAbout} />
                 </div>
             }
             {window.windows[1].isOpen &&
 
-                <div className='container-modal-2'>
-                    < Portfolio onFocus={() => { console.log('test') }} openPort={props.openPort} />
+                <div className='container-modal-2'
+                    style={{ zIndex: window.windows[1].isFocus && 1 }}>
+                    < Portfolio openPort={props.openPort} />
                 </div>
             }
             {window.windows[2].isOpen &&
 
-                <div onClick={handleClick} className='container-modal'>
+                <div className='container-modal'
+                    style={{ zIndex: window.windows[2].isFocus && 1 }}>
                     <Experience openExp={props.openExp} />
                 </div>
             }
