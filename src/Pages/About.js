@@ -42,7 +42,7 @@ const About = (props) => {
                     </p>
                 </div>
                 <div className='about-content' >
-                    <div className='about-item'> <img className='about-item' src={test} alt='test' /></div>
+                    <img className='about-image' src={test} alt='test' />
                     <div className='about-item about-info'> <p className='about-item'>Hello, I'm Andrew!
                         <br /><br />
                         I'm a new Computer Science graduate with an interest in breaking into the world of programming.<br />

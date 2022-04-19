@@ -1,23 +1,18 @@
-img.about-item {
+img.about-image {
     margin: 0;
     border: solid;
     padding: 0;
-    max-width: 100%;
     border-color: rgb(99, 99, 99);
     border-width: 1px;
-
 }
 
 
 .about-content {
-    display: block;
-    justify-content: center;
-    max-height: 50%;
+    display: flex;
     overflow-y: auto;
     margin: 0;
     padding: 0;
     border: inset;
-    max-width: 50%;
 }
 
 .about-item {
@@ -32,4 +27,5 @@ img.about-item {
     border: solid;
     border-width: 1px;
     border-color: rgb(99, 99, 99);
+    max-width: 100%;
 }
