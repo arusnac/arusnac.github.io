@@ -52,10 +52,11 @@ const Experience = (props) => {
                 onClick={handleClick}
                 ref={nodeRef}
                 className='portfolio'
+                style={{ zIndex: window.windows[2].isFocus && 1 }}
             >
                 <div id='handle' className='portfolio-header'>
                     <p className="portfolio-header"
-                        style={{ backgroundColor: window.windows[2].isFocus && '#7d7d7d' }}>
+                        style={{ backgroundColor: window.windows[2].isFocus && '#000080' }}>
                         <img className='contact-icon' src={experienceIcon} alt='icon' />
                         Work Experience
                         <button onClick={closeWindow}

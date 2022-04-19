@@ -37,35 +37,35 @@ const Desktop = (props) => {
         </div>
 
         <div className='container-desktop'>
-            <div className='container-modal'>
-                <Info />
-            </div>
+
+            <Info />
+
             {window.windows[0].isOpen &&
 
-                <div value='about' className='container-modal'
-                    style={{ zIndex: window.windows[0].isFocus && 1 }}>
-                    <About openAbout={props.openAbout} />
-                </div>
+                // <div value='about' className='container-modal'
+                //     style={{ zIndex: window.windows[0].isFocus && 1 }}>
+                <About openAbout={props.openAbout} />
+                // </div>
             }
             {window.windows[1].isOpen &&
 
-                <div className='container-modal-2'
-                    style={{ zIndex: window.windows[1].isFocus && 1 }}>
-                    < Portfolio openPort={props.openPort} />
-                </div>
+                // <div className='container-modal-2'
+                //     style={{ zIndex: window.windows[1].isFocus && 1 }}>
+                < Portfolio openPort={props.openPort} />
+                // </div>
             }
             {window.windows[2].isOpen &&
 
-                <div className='container-modal'
-                    style={{ zIndex: window.windows[2].isFocus && 1 }}>
-                    <Experience openExp={props.openExp} />
-                </div>
+                // <div className='container-modal'
+                //     style={{ zIndex: window.windows[2].isFocus && 1 }}>
+                <Experience openExp={props.openExp} />
+                // </div>
             }
             {window.windows[3].isOpen &&
 
-                <div className='container-modal'>
-                    <Contact openContact={props.openContact} />
-                </div>
+                // <div className='container-modal'>
+                <Contact openContact={props.openContact} />
+                // </div>
             }
 
         </div>

@@ -50,11 +50,11 @@ const Contact = (props) => {
 
     return (
         <Draggable handle='#handle' nodeRef={nodeRef}>
-            <div onClick={handleClick} ref={nodeRef} className='portfolio'>
+            <div onClick={handleClick} ref={nodeRef} className='portfolio' style={{ zIndex: window.windows[3].isFocus && 1 }}>
                 <div id='handle' className='portfolio-header'>
 
                     <p className="portfolio-header"
-                        style={{ backgroundColor: window.windows[3].isFocus && '#7d7d7d' }}>
+                        style={{ backgroundColor: window.windows[3].isFocus && '#000080' }}>
                         <img className='contact-icon' src={emailIcon} alt='icon' />Contact
                         <button onClick={closeWindow} value='contact' className="portfolio-button">X</button></p>
                 </div>

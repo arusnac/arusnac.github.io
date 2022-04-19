@@ -23,9 +23,10 @@ const Portfolio = (props) => {
 
     return (
         <Draggable handle='#handle' nodeRef={nodeRef}>
-            <div onClick={handleClick} ref={nodeRef} className='portfolio'  >
+
+            <div onClick={handleClick} ref={nodeRef} className='portfolio' style={{ zIndex: window.windows[1].isFocus && 1 }} >
                 <div id='handle' className='portfolio-header'
-                    style={{ backgroundColor: window.windows[1].isFocus && '#7d7d7d' }}>
+                    style={{ backgroundColor: window.windows[1].isFocus && '#000080' }}>
                     <img className='contact-icon' src={portfolioIcon} alt='icon' />Portfolio
                     <button
                         onClick={closeWindow}
@@ -45,9 +46,10 @@ const Portfolio = (props) => {
                         <img className='portfolio-image' src={test} alt='test' />
 
                     </div>
-
                 </div>
             </div>
+
+
         </Draggable >
 
     )
