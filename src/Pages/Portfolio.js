@@ -36,7 +36,7 @@ const Portfolio = (props) => {
             <div onClick={handleClick} ref={nodeRef} className='portfolio' style={{ zIndex: window.windows[1].isFocus && 1 }} >
                 <div id='handle' className='portfolio-header'
                     style={{ backgroundColor: window.windows[1].isFocus && '#000080' }}>
-                    <img className='contact-icon' src={portfolioIcon} alt='icon' />Portfolio
+                    <img className='contact-icon' src={portfolioIcon} alt='icon' />Portfolio.exe
                     <button
                         onClick={closeWindow}
                         value='portfolio'

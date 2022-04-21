@@ -55,7 +55,7 @@ const Contact = (props) => {
 
                     <p className="portfolio-header"
                         style={{ backgroundColor: window.windows[3].isFocus && '#000080' }}>
-                        <img className='contact-icon' src={emailIcon} alt='icon' />Contact
+                        <img className='contact-icon' src={emailIcon} alt='icon' />Contact.exe
                         <button onClick={closeWindow} value='contact' className="portfolio-button">X</button></p>
                 </div>
                 <div className='contact-container'>

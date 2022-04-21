@@ -32,7 +32,7 @@ const About = (props) => {
 
                     <p className="portfolio-header" style={{ backgroundColor: window.windows[0].isFocus && '#000080' }}>
                         <img className='contact-icon' src={aboutIcon} alt='icon' />
-                        About
+                        About.exe
                         <button
                             onClick={closeWindow}
                             value='about'
