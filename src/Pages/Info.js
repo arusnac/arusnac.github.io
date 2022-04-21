@@ -3,14 +3,18 @@ import Draggable from "react-draggable";
 import infoIcon from "../assets/infoIcon.png"
 import styles from "./Info.module.css"
 import catGif from '../assets/cat.gif'
+import { useSelector } from "react-redux";
 
 const Info = (props) => {
     const nodeRef = React.useRef(null);
+    const window = useSelector((state) => state.window.value);
+
 
     return (
         <Draggable handle='#handle' nodeRef={nodeRef}>
-            <div ref={nodeRef} className='portfolio'>
-                <div id='handle' className='portfolio-header'>
+            <div ref={nodeRef} className='portfolio' style={{ zIndex: window.windows[4].isFocus && 1 }}>
+                <div id='handle' className='portfolio-header'
+                    style={{ backgroundColor: window.windows[4].isFocus && '#000080' }}>
 
                     <p className="portfolio-header"><img className='contact-icon' src={infoIcon} alt='icon' />info.txt
                         <button onClick={props.openContact} className="portfolio-button">X</button></p>

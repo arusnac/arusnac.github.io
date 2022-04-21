@@ -5,6 +5,7 @@ import portfolioIcon from '../assets/Portfolio/portfolio.png';
 import Draggable from "react-draggable";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
+import styles from './Portfolio.module.css'
 import { toggleFocus, toggleOpen } from "../Redux/windowSlice";
 
 const Portfolio = (props) => {
@@ -35,21 +36,37 @@ const Portfolio = (props) => {
                         X
                     </button>
                 </div>
-                <div className='portfolio-content'>
-                    <h4>Todo Application</h4>
+                <div className={styles.portfolio_wrapper}>
+                    <div className={styles.navigation}>
+                        <button className={styles.navigation_link}>Portfolio Website</button>
+                        <button className={styles.navigation_link}>House Price Predictor</button>
+                    </div>
+                    <div className={styles.main}>
 
+                        <div className={styles.portfolio_inner}>
+                            <h4>Desktop-like Site</h4>
+                            <p>This is my latest project which is a work in progress.
+                                My hopes are to turn this into a more fully featured desktop (simulating Windows 95
+                                more or less.) I'd like to add additional applications that you can run such as a music
+                                player for example.<br /><br />
 
-                    <p>This application was developed using Python and Flask</p>
-                    <div className='portfolio-content-inner'>
+                                This was done using React with Redux for state management.<br /><br />
+                                <b>Some Todo's:</b>
+                            </p>
+                            <form>
+                                <input type='checkbox' checked />Add Socials<br />
+                                <input type='checkbox' />Make Site Mobile Friendly<br />
+                                <input type='checkbox' />Add "Screensaver"<br />
+                                <input type='checkbox' />Add Calender<br />
+                                <input type='checkbox' />Add Applications (calculator, emulators)<br />
+                            </form>
+                            {/* <img className={styles.portfolio_image} src={test} alt='test' /> */}
 
-
-                        <img className='portfolio-image' src={test} alt='test' />
-
+                        </div>
                     </div>
                 </div>
+
             </div>
-
-
         </Draggable >
 
     )

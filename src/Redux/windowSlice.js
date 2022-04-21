@@ -5,7 +5,11 @@ const initialState = {
         { id: 'about', isOpen: false, isFocus: false },
         { id: 'portfolio', isOpen: false, isFocus: false },
         { id: 'experience', isOpen: false, isFocus: false },
-        { id: 'contact', isOpen: false, isFocus: false }
+        { id: 'contact', isOpen: false, isFocus: false },
+        { id: 'info', isOpen: true, isFocus: true },
+    ],
+    navbar: [
+        { id: 'menu', isOpen: false }
     ]
 }
 
@@ -23,10 +27,16 @@ export const windowSlice = createSlice({
             state.value = action.payload
             return state
         },
+        toggleMenu: (state, action) => {
+            state.value.navbar[0].isOpen = !state.value.navbar[0].isOpen
+        },
         toggleOpen: (state, action) => {
             for (const i in state.value.windows) {
                 if (state.value.windows[i].id === action.payload) {
                     state.value.windows[i].isOpen = !state.value.windows[i].isOpen
+                    if (state.value.navbar[0].isOpen === true) {
+                        state.value.navbar[0].isOpen = false;
+                    }
                 }
             }
         },
@@ -51,33 +61,6 @@ export const windowSlice = createSlice({
 
 
 
-// return {
-//     ...state,
-//     windows: state.value.windows.map(window => {
-//         if (window.id !== action.payload.toString()) {
-//             console.log(action.payload.toString());
 
-//             return window;
-//         }
-
-//         return {
-//             ...window,
-//             isOpen: !window.isOpen
-
-//         }
-//     })
-// }
-
-//             let test = ...action.payload
-//             if(action.payload === state.value)
-// console.log(state.value)
-// state.value = action.payload
-// console.log(state)
-// console.log(state.value)
-//         },
-//     },
-
-
-
-export const { changeStatus, toggleOpen, toggleFocus } = windowSlice.actions;
+export const { changeStatus, toggleOpen, toggleFocus, toggleMenu } = windowSlice.actions;
 export default windowSlice.reducer;

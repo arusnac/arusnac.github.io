@@ -6,11 +6,13 @@
     background-color: #c0c0c0;
     padding: 0;
     margin: 25px;
-    max-width: 100%;
+    max-width: 50%;
     border: outset;
     box-shadow: 1px 1px;
-    position: fixed !important;
-
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    max-height: 75%;
 }
 
 
@@ -26,22 +28,36 @@ p.portfolio-header {
     color: white;
 }
 
+p.info-text {
+    white-space: pre-wrap;
+    background-color: white;
+    border-style: inset;
+    margin: 5px;
+    justify-content: center;
+}
+
 img.header-icon {
     width: 16px;
     padding-right: 5px;
 }
 
+.portfolio-page-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
 .portfolio-content {
-    display: block;
-    max-height: 800px;
+    display: flex;
+    flex-direction: column;
     overflow-y: auto;
-    justify-content: center;
-    text-align: center;
+
+
+
 }
 
 .portfolio-content-inner {
     justify-content: center;
-    width: 50%;
+
 }
 
 .portfolio-test {
@@ -54,7 +70,8 @@ img.header-icon {
 }
 
 img.portfolio-image {
-    max-width: 90%;
+    margin: 5px;
+    max-width: 100%;
 }
 
 

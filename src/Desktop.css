@@ -1,6 +1,7 @@
 body {
     background-color: #008080;
 
+
 }
 
 a {
@@ -13,10 +14,12 @@ a {
 
 .container-desktop {
     display: flex;
-
+    height: 100vh;
     padding: 0;
     justify-content: center;
 }
+
+
 
 .container_icon {
     display: grid;

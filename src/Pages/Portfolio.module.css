@@ -1,0 +1,46 @@
+.portfolio_wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    background-color: white;
+}
+
+.navigation {
+    flex: 1 auto;
+    margin: 0;
+
+}
+
+.main {
+    flex: 20 0px;
+    margin: 10px;
+    padding: 10px;
+}
+
+button.navigation_link {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: white;
+    margin-top: 10px;
+
+}
+
+button:hover.navigation_link {
+    background-color: rgb(146, 146, 146);
+}
+
+.portfolio_inner {
+    padding-left: 20px;
+    border-style: ridge;
+    border-color: rgb(85, 85, 85);
+    border-right: 0;
+    border-left: 1;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+img.portfolio_image {
+    padding: 0;
+    width: 100%;
+}
