@@ -9,6 +9,11 @@
     width: 100%;
 }
 
+.start_menu {
+    display: block;
+    bottom: 0%;
+}
+
 .time {
     margin-left: auto;
     margin-right: 0;

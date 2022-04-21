@@ -21,6 +21,9 @@ const Info = (props) => {
                 </div>
                 <div className={styles.info_container}>
                     <p>Welcome!<br /><br />
+                        This website was built to simulate the look and feel<br />
+                        of a Windows 95 desktop.
+                        <br /><br />
                         You can check out my socials with the "desktop icons"<br />
                         or in the tray on the bottom right. Hit the start button<br />
                         to check out more about me :)

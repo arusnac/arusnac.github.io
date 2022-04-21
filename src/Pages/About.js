@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from 'react-redux';
-import test from '../assets/Portfolio/me.jpg'
-import './Portfolio.css'
-import './About.css'
+import test from '../assets/Portfolio/me.jpg';
+import './Portfolio.css';
+import './About.css';
 import aboutIcon from '../assets/Portfolio/aboutIcon.png';
 import Draggable from "react-draggable";
-import { toggleFocus, toggleOpen } from '../Redux/windowSlice'
+import { toggleFocus, toggleOpen } from '../Redux/windowSlice';
 
 
 
