@@ -8,7 +8,8 @@
     background-color: #8b8b8b;
     position: fixed;
     bottom: 0%;
-    border-color: #a0a0a0;
+    border: outset;
+    border-color: #cfcfcf;
     border-width: 2px;
 
 }

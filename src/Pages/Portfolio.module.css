@@ -18,6 +18,8 @@
     padding: 10px 10px 10px 0;
     max-height: 600px;
     overflow-y: scroll;
+    border-left: ridge;
+    border-color: rgb(85, 85, 85);
 }
 
 button.navigation_link {
@@ -36,12 +38,7 @@ button:hover.navigation_link {
 
 .portfolio_inner {
     padding-left: 20px;
-    border-style: ridge;
-    border-color: rgb(85, 85, 85);
-    border-right: 0;
-    border-left: 1;
-    border-top: 0;
-    border-bottom: 0;
+
 }
 
 img.portfolio_image {
