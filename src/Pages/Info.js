@@ -1,13 +1,23 @@
 import React from "react";
 import Draggable from "react-draggable";
-import infoIcon from "../assets/infoIcon.png"
-import styles from "./Info.module.css"
-import catGif from '../assets/cat.gif'
-import { useSelector } from "react-redux";
+import infoIcon from "../assets/infoIcon.png";
+import styles from "./Info.module.css";
+import catGif from '../assets/cat.gif';
+import { useSelector, useDispatch } from "react-redux";
+import { toggleFocus, toggleOpen } from '../Redux/windowSlice';
 
 const Info = (props) => {
     const nodeRef = React.useRef(null);
     const window = useSelector((state) => state.window.value);
+    const dispatch = useDispatch();
+
+    const handleClick = () => {
+        dispatch(toggleFocus('about'))
+    }
+
+    const closeWindow = (e) => {
+        dispatch(toggleOpen(e.target.value))
+    }
 
 
     return (
@@ -16,8 +26,9 @@ const Info = (props) => {
                 <div id='handle' className='portfolio-header'
                     style={{ backgroundColor: window.windows[4].isFocus && '#000080' }}>
 
-                    <p className="portfolio-header"><img className='contact-icon' src={infoIcon} alt='icon' />info.txt
-                        <button onClick={props.openContact} className="portfolio-button">X</button></p>
+                    <p className="portfolio-header" style={{ backgroundColor: window.windows[4].isFocus && '#000080' }}>
+                        <img className='contact-icon' src={infoIcon} alt='icon' />info.txt
+                        <button value='info' onClick={closeWindow} className="portfolio-button">X</button></p>
                 </div>
                 <div className={styles.info_container}>
                     <p>Welcome!<br /><br />

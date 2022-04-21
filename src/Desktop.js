@@ -3,19 +3,26 @@ import './Desktop.css'
 import gitHub from './assets/github.png'
 import linkedIn from './assets/linkedin.png'
 import Portfolio from "./Pages/Portfolio";
-import eventBus from "./EventBus";
 import About from "./Pages/About";
 import Experience from "./Pages/Experience";
 import Contact from "./Pages/Contact";
 import Info from './Pages/Info';
-import Draggable from 'react-draggable';
+import Text from './assets/text.png'
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleFocus } from './Redux/windowSlice';
+import { toggleFocus, toggleOpen } from './Redux/windowSlice';
+
 
 const Desktop = (props) => {
     const window = useSelector((state) => state.window.value);
     const windowStates = useSelector((state) => state.window);
     const focusWindow = useRef(null);
+    const dispatch = useDispatch();
+
+    const updateWindow = (e) => {
+        dispatch(toggleOpen(e.target.value))
+        dispatch(toggleFocus(e.target.value))
+    }
+
 
 
     return (<div>
@@ -34,38 +41,34 @@ const Desktop = (props) => {
                 </div>
             </div>
 
+            <div className='desktop-item-info'>
+                <img className="desktop-img-info" src={Text} alt='LinkedIn'></img>
+                <div>
+                    <a href={updateWindow} target="_blank" rel="noreferrer noopener">info.txt</a>
+                </div>
+            </div>
+
         </div>
 
         <div className='container-desktop'>
 
-            <Info />
-
-            {window.windows[0].isOpen &&
-
-                // <div value='about' className='container-modal'
-                //     style={{ zIndex: window.windows[0].isFocus && 1 }}>
-                <About openAbout={props.openAbout} />
-                // </div>
+            {
+                window.windows[4].isOpen && <Info />
             }
-            {window.windows[1].isOpen &&
 
-                // <div className='container-modal-2'
-                //     style={{ zIndex: window.windows[1].isFocus && 1 }}>
-                < Portfolio openPort={props.openPort} />
-                // </div>
+            {
+                window.windows[0].isOpen &&
+                <About />
+            }
+            {
+                window.windows[1].isOpen &&
+                < Portfolio />
             }
             {window.windows[2].isOpen &&
-
-                // <div className='container-modal'
-                //     style={{ zIndex: window.windows[2].isFocus && 1 }}>
                 <Experience openExp={props.openExp} />
-                // </div>
             }
             {window.windows[3].isOpen &&
-
-                // <div className='container-modal'>
                 <Contact openContact={props.openContact} />
-                // </div>
             }
 
         </div>

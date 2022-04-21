@@ -2,7 +2,6 @@ import './App.css';
 import Navbar from './Navigation/Navbar'
 import Desktop from './Desktop'
 import React, { useState } from 'react';
-import Portfolio from './Pages/Portfolio';
 
 let startingState = [{ element: 'Portfolio', isFocus: false, isOpen: false },
 { element: 'About', isFocus: false, isOpen: false },
