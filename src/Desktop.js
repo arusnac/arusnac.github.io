@@ -10,6 +10,7 @@ import Info from './Pages/Info';
 import Text from './assets/text.png'
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleFocus, toggleOpen } from './Redux/windowSlice';
+import NewAbout from "./Pages/NewAbout";
 
 
 const Desktop = (props) => {
@@ -44,7 +45,7 @@ const Desktop = (props) => {
             <div className='desktop-item-info'>
                 <img className="desktop-img-info" src={Text} alt='LinkedIn'></img>
                 <div>
-                    <a href={updateWindow} target="_blank" rel="noreferrer noopener">info.txt</a>
+                    <button className='desktop_link' onClick={updateWindow} value='info'>info.txt</button>
                 </div>
             </div>
 
@@ -72,7 +73,7 @@ const Desktop = (props) => {
             }
 
         </div>
-    </div>
+    </div >
     );
 }
 

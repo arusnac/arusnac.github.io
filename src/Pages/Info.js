@@ -39,7 +39,7 @@ const Info = (props) => {
                         or in the tray on the bottom right. Hit the start button<br />
                         to check out more about me :)
                         <br /><br />
-                        *Note this is a work in progress, it's buggy and incomplete!</p>
+                        *Note this is a work in progress there may be bugs!</p>
                     <div className={styles.info}>
                         <img src={catGif} alt='cat' />
                     </div>

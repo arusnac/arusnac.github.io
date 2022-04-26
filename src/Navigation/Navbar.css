@@ -48,7 +48,8 @@ button:active.navbar-button__start {
     text-align: center;
     border-color: #808080;
     padding: 2px 12px;
-    text-decoration: none;
+
+    font-weight: bold;
 }
 
 img.navbar-image {

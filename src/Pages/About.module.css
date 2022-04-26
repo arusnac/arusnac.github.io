@@ -1,0 +1,8 @@
+.about_navigation {
+    display: flex;
+    flex-direction: row;
+}
+
+button.about_tabs {
+    background-color: #c0c0c0;
+}

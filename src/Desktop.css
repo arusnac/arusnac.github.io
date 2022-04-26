@@ -19,10 +19,19 @@ a {
     justify-content: center;
 }
 
+button.desktop_link {
+    background: none;
+    border: none;
+    color: white;
+}
 
+button:hover.desktop_link {
+    cursor: pointer;
+}
 
 .container_icon {
     display: grid;
+
     grid-template-columns: 100px;
 }
 
